@@ -27,13 +27,14 @@
     size: 12px;
 }
 .verify-output {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 .verify-output th, td{
     font-family: Calibri;
     padding: 0,0,0,0;
     background-color: #ffffff;
     size: 12px;
+    align: center;
 }
 </style>
  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
