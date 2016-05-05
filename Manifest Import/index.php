@@ -1,7 +1,7 @@
 <style type="text/css">
 .block {
     padding-top: 10px;
-    }
+}
 .block table {
     border: none;
 }
@@ -26,6 +26,15 @@
     font-family: Calibri;
     size: 12px;
 }
+.verify-output {
+    padding-left: 10px;
+}
+.verify-output th, td{
+    font-family: Calibri;
+    padding: 0,0,0,0;
+    background-color: #ffffff;
+    size: 12px;
+}
 </style>
  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>
@@ -33,11 +42,12 @@
   <script type="text/javascript">
                $(document).ready(function(){
                     $("#button").click(function(){
- 
+                          var depot=$("#depot").val();
+                          
                           $.ajax({
                               type:"post",
-                              url:"read.php",
-                              data:"",
+                              url:"verify.php",
+                              data:"depot="+depot,
                               success:function(data){
                                  $("#output").html(data);
                               }
@@ -91,11 +101,10 @@ while ($array=odbc_fetch_array($go)) {
 </td><td><input type="button" id="button" class="verify" name="submit" value="Verify"></td>
 
 </tr>
-<tr><td>Scottish:</td><td><input type="checkbox" name="scottish" value="1"></td>
-</tr>
+
 </table>
 
-<div id="output"></div>
+<div class="verify-output" id="output"></div>
 </div>
 
 <h2>Display Manifest List</h2>
