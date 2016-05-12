@@ -40,7 +40,7 @@ if (file_exists($englocal_file)) {
     if ($scotrecCnt <> '') {
         echo '<td align="center">'. date ("d-M-Y H:i:s", $scotbuff).'</td><td align="center">'.$scotrecCnt.'</td>';
     } else {
-        echo '<td></td><td></td>';
+        echo '<td align="center">N/A</td><td align="center">N/A</td>';
     }
     echo '</tr>';
     echo '</table>';
