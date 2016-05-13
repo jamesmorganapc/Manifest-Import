@@ -20,7 +20,7 @@
 	$get = ftp_get($ftp_conn, $scotlocal_file, $scotserver_file, FTP_BINARY);
     $scotbuff = ftp_mdtm($ftp_conn, $scotserver_file);
     ftp_close($ftp_conn);
-
+    //test
 if (file_exists($englocal_file)) {
     $engdb = dbase_open($englocal_file, 0);
     if ($engdb) {
